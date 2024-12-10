@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    position: relative;
+  
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.photo-container {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.photo-container img {
+    width: 450px;
+    height: auto;
+    border-radius: 250px;
+    border-bottom: 2px solid #b42b2b;
+
+   
+}
+
+/* Styles for the navigation container */
+.container {
+    position: relative;
+    margin-top: 80px; /* Adjust as needed to move below the photo-container */
+}
+
+/* Updated styles for the logo in the nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position: fixed; /* Fixer le nav en haut */
+    top: 0; /* Aligner en haut de la fenêtre */
+    left: 0; /* Commencer depuis le bord gauche */
+    width: 100%; /* Occuper toute la largeur de la page */
+    background: black; /* Couleur d'arrière-plan pour éviter de se mélanger avec le contenu */
+    z-index: 1000; 
+  
+}
+
+/* Animation for slide-in effect */
+.slide-in {
+    animation: slideIn 1s forwards; /* Adjust duration as needed */
+}
+
+.MK {
+    width: 60px; /* Resize the logo */
+    height: auto;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.my-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px; /* Add a small space between the logo and name */
+}
+
+/* Flexbox to align nav items to the right */
+.nav-links {
+    display: flex; /* Display menu items in a row */
+    gap: 10px; /* Adjust the space between menu items */
+    margin-left: auto; /* Push nav links to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Reduced gap between menu items */
+}
+
+nav ul li {
+    margin-left: 20px; /* Adjust margin for smaller space */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position:relative
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+   background: #b42b2b;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+nav ul li a:hover {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translate(-100%);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.header-text{
+    margin-top: 30%;
+    margin-left: 3%;
+    font-size: 30px;
+    
+}
+
+.header-text {
+    font-size: 30px;
+    margin-top: 15%;
+    position: absolute;
+}
+.header-text h1 span{
+    color: #b42b2b;
+    
+}
+
+           /*------------- About Section------------------ */
+
+
+
+#about{
+   /* padding:  80px 0;*/
+   margin-bottom: 40px;
+   margin-top: -20px;
+    color: #ababab;
+    margin-left: 10px;
+
+}
+.row{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap; 
+}
+.about-col-1{
+    flex-basis: 35%;/* A rectifier */
+    margin-left: 30px;
+}
+.about-col-1 img{
+    width: 100% ;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    margin-left: 20px;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 550;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+ 
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #b42b2b;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s ;
+}
+.tab-links.active-link::after{
+width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    
+}
+.tab-contents ul li span{
+    color: #b45959;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+     /*---------------Services----------------------*/
+
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 100px ;
+    margin-top: 50px;
+}

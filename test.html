@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khadija MELLAK | Portfolio</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <div id="header"> 
+        <div class="photo-container">
+            <img src="Images/Background.png" alt="MyPhoto">
+        </div>
+        <div class="container">
+            <nav>
+                
+                <img src="Images/MK.png" alt="MyLogo" class="MK">
+                <div class="slide-in"> <!-- Added slide-in class --> 
+                    <span class="my-name">Khadija MELLAK</span>
+                </div>
+                <div class="nav-links"> <!-- New div for nav links -->
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Khadija MELLAK</span><br> from Morocco </h1>
+            </div>
+        </div>
+    </div>
+
+              <!-- -------------about--------------->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/ImageAbout.png" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I am MELLAK Khadija, a first year student in <br> Software engineering & IA at the National School <br>of Applied Sciences ENSA Fes <br></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web sites and apps Development</li>
+                            <li><span>App Developemnt</span><br>Building Android & iOS apps </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Smart Project In Favour of Sustainable Development In Morocco</span><br>Creating an electronic system to protect the parking places for people <br> of special needs in public places in Morocco</li>
+                            <li><span>Snake's Game </span><br>Creating the very famous game Snake using Python and Pygame Package<br></li>
+                            <li><span>National Debating Competiton</span><br>Winning the first prize on the national scale with Team Great Debators (TGD) ENSA-FES </li>
+                            <li><span>Intership at ALTEN company  July 2024-August 2024</span><br>Working on creating chat bots in Commercial Web Sites Topic</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2022</span><br>Bachelor Degree at Mathematical Sciences B <br>Bensouda High School,Fes</li>
+                            <li><span>2022 - 2027</span><br>Major at Software Engineering & Artificial Intellegence <br> at National School of Applied Sciences ENSA Fes</li>
+                            <li><span>National Debating Competiton</span><br>Winning the first prize on the national scale with Team Great Debators (TGD) ENSA-FES </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+       <!--------------Services--------------->
+    <div id="services">
+
+    </div>
+        <div class="container">
+           <h1 class="sub-title">My Services</h1>
+           <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Paragraph</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="services-list">
+                    <div>
+                        <h2>UX/UI Designer</h2>
+                        <p>Paragraph</p>
+                        <a href="#">Learn More</a>
+                    </div>
+               </div>
+               <div class="services-list">
+                <div>
+                    <h2>App Developemnt</h2>
+                    <p>Paragraph</p>
+                    <a href="#">Learn More</a>
+                </div>
+           </div>
+           </div>
+
+        </div>
+
+    <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+</body>
+</html>
